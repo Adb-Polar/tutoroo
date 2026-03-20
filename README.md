@@ -2,6 +2,27 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+### STEP 1: Create the Database
+- Using mysql workbench or phphmyadmin create a database named `tutoroo_db`
+```sql
+CREATE DATABASE tutoroo_db;
+```
+> you dont need to create any table just the database
+
+### STEP 2: Migrate using prisma
+- open terminal and run
+```bash
+pnpm prisma migrate dev
+```
+> this will create tables based on the schema.prisma
+
+### STEP 3: Genrate types from prisma
+```bash
+pnpm prisma generate
+```
+
+
+
 First, run the development server:
 
 ```bash
